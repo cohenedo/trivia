@@ -1,0 +1,202 @@
+{
+    "0": {
+        "question": "Which Grand Theft Auto (GTA) games have the same setting?",
+        "answers": [
+            "GTA V and GTA Vice City",
+            "GTA V and GTA San Andreas",
+            "GTA IV and GTA San Andreas",
+            "GTA IV and GTA Vice City"
+        ],
+        "correct": 2
+    },
+    "1": {
+        "question": "In which state of America was the Fresh Prince of Bel-Air born and raised in?",
+        "answers": [
+            "New Jersey",
+            "Pennsylvania",
+            "Florida",
+            "California"
+        ],
+        "correct": 2
+    },
+    "2": {
+        "question": "When was Minecraft first released to the public?",
+        "answers": [
+            "October 7th, 2011",
+            "September 17th, 2009",
+            "May 17th, 2009",
+            "November 18th, 2011"
+        ],
+        "correct": 3
+    },
+    "3": {
+        "question": "What is Cynophobia the fear of?",
+        "answers": [
+            "Flying",
+            "Germs",
+            "Birds",
+            "Dogs"
+        ],
+        "correct": 4
+    },
+    "4": {
+        "question": "In Super Mario Bros., who informs Mario that the princess is in another castle?",
+        "answers": [
+            "Bowser",
+            "Toad",
+            "Luigi",
+            "Yoshi"
+        ],
+        "correct": 2
+    },
+    "5": {
+        "question": "Which of these Elements is a metalloid?",
+        "answers": [
+            "Tin",
+            "Bromine",
+            "Rubidium",
+            "Antimony"
+        ],
+        "correct": 4
+    },
+    "6": {
+        "question": "What Ultimate does Makoto Naegi, protagonist of Danganronpa: Trigger Happy Havoc, have? ",
+        "answers": [
+            "Ultimate Runner",
+            "Ultimate Detective",
+            "Ultimate Lucky Student",
+            "Ultimate Unlucky Student"
+        ],
+        "correct": 3
+    },
+    "7": {
+        "question": "Who is depicted on the US hundred dollar bill?",
+        "answers": [
+            "Abraham Lincoln",
+            "Thomas Jefferson",
+            "Benjamin Franklin",
+            "George Washington"
+        ],
+        "correct": 3
+    },
+    "8": {
+        "question": "Which of the following car manufacturers had a war named after it?",
+        "answers": [
+            "Toyota",
+            "Ford",
+            "Volkswagen",
+            "Honda"
+        ],
+        "correct": 1
+    },
+    "9": {
+        "question": "What Nickelodeon game show featured a house on the set that the contestants would ransack to find hidden objects?",
+        "answers": [
+            "Finders Keepers",
+            "Nick Arcade",
+            "Double Dare",
+            "Nickelodeon Guts"
+        ],
+        "correct": 1
+    },
+    "10": {
+        "question": "Which of the following Zelda games did not feature Ganon as a final boss?",
+        "answers": [
+            "Ocarina of Time",
+            "Skyward Sword",
+            "Majora&#039;s Mask",
+            "Breath of the Wild"
+        ],
+        "correct": 3
+    },
+    "11": {
+        "question": "How many chromosomes are in your body cells?",
+        "answers": [
+            "21",
+            "23",
+            "24",
+            "22"
+        ],
+        "correct": 2
+    },
+    "12": {
+        "question": "Who is the lead singer of the British pop rock band Coldplay?",
+        "answers": [
+            "Will Champion",
+            "Chris Martin",
+            "Guy Berryman",
+            "Jonny Buckland"
+        ],
+        "correct": 2
+    },
+    "13": {
+        "question": "Which American president appears on a one dollar bill?",
+        "answers": [
+            "Thomas Jefferson",
+            "George Washington",
+            "Abraham Lincoln",
+            "Benjamin Franklin"
+        ],
+        "correct": 2
+    },
+    "14": {
+        "question": "How old was Adolf Hitler when he died?",
+        "answers": [
+            "47",
+            "65",
+            "56",
+            "43"
+        ],
+        "correct": 3
+    },
+    "15": {
+        "question": "How many people are in the U.S. House of Representatives?",
+        "answers": [
+            "415",
+            "260",
+            "50",
+            "435"
+        ],
+        "correct": 4
+    },
+    "16": {
+        "question": "Under what pseudonym did Stephen King publish five novels between 1977 and 1984?",
+        "answers": [
+            "Richard Bachman",
+            "Mark Twain",
+            "J. D. Robb",
+            "Lewis Carroll"
+        ],
+        "correct": 1
+    },
+    "17": {
+        "question": "What is the capital of South Korea?",
+        "answers": [
+            "Pyongyang",
+            "Seoul",
+            "Taegu",
+            "Kitakyushu"
+        ],
+        "correct": 2
+    },
+    "18": {
+        "question": "What country is Cory in the House set in?",
+        "answers": [
+            "The United States of America",
+            "England",
+            "Canada",
+            "Venezuala"
+        ],
+        "correct": 1
+    },
+    "19": {
+        "question": "How many soccer players should be on the field at the same time?",
+        "answers": [
+            "24",
+            "22",
+            "20",
+            "26"
+        ],
+        "correct": 2
+    }
+}

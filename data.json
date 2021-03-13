@@ -1,0 +1,102 @@
+{
+    "0": {
+        "question": "The main six year old protagonist in Calvin and Hobbes is named after what theologian?",
+        "answers": [
+            "Calvin Coolidge",
+            "John Calvin",
+            "Calvin Klein",
+            "Phillip Calvin McGraw"
+        ],
+        "correct": 2
+    },
+    "1": {
+        "question": "What is the name of the adventurer you meet at the mines in Stardew Valley?",
+        "answers": [
+            "Morris",
+            "Marvin",
+            "Marnie",
+            "Marlon"
+        ],
+        "correct": 4
+    },
+    "2": {
+        "question": "Which of these songs is NOT included in the Suicide Squad OST?",
+        "answers": [
+            "Fortunate Son - Creedence Clearwater Revival",
+            "Without Me - Eminem",
+            "Skies on Fire - AC/DC",
+            "Heathens - Twenty One Pilots"
+        ],
+        "correct": 3
+    },
+    "3": {
+        "question": "Which of these roles in Town of Salem is mafia?",
+        "answers": [
+            "Disguiser",
+            "Lookout",
+            "Transporter",
+            "Escort"
+        ],
+        "correct": 1
+    },
+    "4": {
+        "question": "What country did Shirley Bassey originate from?",
+        "answers": [
+            "Wales",
+            "England",
+            "America",
+            "Canada"
+        ],
+        "correct": 1
+    },
+    "5": {
+        "question": "Which of the following authors was not born in England? ",
+        "answers": [
+            "Graham Greene",
+            "Arthur C Clarke",
+            "H G Wells",
+            "Arthur Conan Doyle"
+        ],
+        "correct": 4
+    },
+    "6": {
+        "question": "How many sovereign states are members of the United Nations?",
+        "answers": [
+            "201",
+            "153",
+            "178",
+            "195"
+        ],
+        "correct": 4
+    },
+    "7": {
+        "question": "Which Variable Valve Timing technology is used by BMW?",
+        "answers": [
+            "VVT-iw",
+            "VVEL",
+            "VANOS",
+            "MultiAir"
+        ],
+        "correct": 3
+    },
+    "8": {
+        "question": "Which of these games was the earliest known first-person shooter with a known time of publication?",
+        "answers": [
+            "Quake",
+            "Spasim",
+            "Doom",
+            "Wolfenstein"
+        ],
+        "correct": 2
+    },
+    "9": {
+        "question": "What round is a classic AK-47 chambered in?",
+        "answers": [
+            "7.62x51mm",
+            "7.62x39mm",
+            "5.56x45mm",
+            "5.45x39mm"
+        ],
+        "correct": 2
+    }
+}
