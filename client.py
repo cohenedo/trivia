@@ -104,7 +104,6 @@ def get_highscore(conn):
     error_and_exit("Error: could not get highscore")
 
 
-# noinspection DuplicatedCode
 def play_question(conn):
     """
     Get question, send user's answer, get and print feedback
@@ -145,40 +144,6 @@ def play_question(conn):
         print("Wrong answer, Correct answer is: " + question[1 + int(correct_answer)])
     else:
         error_and_exit("error occurred")
-
-
-# noinspection DuplicatedCode
-def play_question2(conn):
-    """
-    Get question, send user's answer, get and print feedback
-    :param conn:
-    :return:
-    """
-    cmd, question = build_send_recv_parse(conn, chatlib.PROTOCOL_CLIENT["get_question_msg"], "")
-    if cmd == chatlib.PROTOCOL_SERVER["no_questions_msg"]:
-        print("GAME OVER: No more question to show.")
-        return
-
-    question = chatlib.split_data(question, 6)  # print question
-    for i in range(1, len(question)):
-        if i > 1:
-            print(str(i - 1) + ". " + str(question[i]))
-        else:
-            print(question[i])
-
-    # send answer and get feedback (correct / wrong)
-    for i in range(100):
-        for j in range(1, 5):
-            answer = j
-            answer = [question[QUESTION_COMPONENTS["id"]], answer]
-            answer = chatlib.join_data(answer)
-            cmd, correct_answer = build_send_recv_parse(conn, chatlib.PROTOCOL_CLIENT["send_answer_msg"], answer)
-            if cmd == chatlib.PROTOCOL_SERVER["correct_answer_msg"]:
-                print("Correct!")
-            elif cmd == chatlib.PROTOCOL_SERVER["wrong_answer_msg"]:
-                print("Wrong answer, Correct answer is: " + question[1 + int(correct_answer)])
-            else:
-                error_and_exit("error occurred")
 
 
 def get_logged_user(conn):
