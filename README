@@ -7,4 +7,4 @@ Instructions for playing the game:
     user3: pass3
 4. Play the game :)
 
-* for reseting the users database and loading new questions run "server.py" with arg reset="True"
+* for reseting the users database and loading new questions run "server.py" with arg -r (--reset)
