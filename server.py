@@ -3,6 +3,8 @@ import socket
 import chatlib
 import random
 import json
+import load_questions_from_web
+import argparse
 
 logged_users = {}  # a dictionary of client hostnames to usernames
 client_sockets = []  # logged users sockets
@@ -16,6 +18,10 @@ SERVER_IP = "127.0.0.1"
 SERVER_PORT = 5678
 MAX_MSG_LENGTH = 1024
 QUESTIONS_TO_LOAD = 20
+
+parser = argparse.ArgumentParser(description="Play a trivia game")
+parser.add_argument("-r", "--reset", action="store_true", help="reset user and questions db")
+args = parser.parse_args()
 
 
 def build_and_append_to_outbox(conn, cmd, data):
@@ -195,8 +201,7 @@ def handle_answer_message(conn, data, username):
 
     qid, choice = chatlib.split_data(data, 2)
     choice = int(choice)
-    print("choice", choice, type(choice))
-    print("correct is", questions[qid]["correct"], type(questions[qid]["correct"]))
+    print("correct is", questions[qid]["correct"])
     if qid in users[username][
         "questions_answered"]:  # ensure user is only submitting one answer for each question
         handle_error(conn, "You may only answer question once")
@@ -347,7 +352,6 @@ def main(reset=False):
     print("Welcome to Trivia Server!")
     if reset:
         reset_users_json()
-        import load_questions_from_web
         load_questions_from_web.load(QUESTIONS_TO_LOAD)
     server_socket = setup_socket()
     questions = load_from_json(QUESTIONS_JSON)
@@ -371,4 +375,4 @@ def main(reset=False):
 
 
 if __name__ == '__main__':
-    main(reset=False)
+    main(args.reset)
