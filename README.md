@@ -1,4 +1,7 @@
-Instructions for playing the game:
+# Trivia
+Trivia game for multiple users over a network made for fun and learning purposes. 
+
+## Usage
 1. Run server.py
 2. Run client.py for every user who wishes to play the game.
 3. Log in with one or more of the following users:
@@ -7,4 +10,5 @@ Instructions for playing the game:
     user3: pass3
 4. Play the game :)
 
-* for reseting the users database and loading new questions run "server.py" with arg -r (--reset)
+## Resetting Database
+`python server.py -r`
