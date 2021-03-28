@@ -1,202 +1,202 @@
 {
     "0": {
-        "question": "Which Grand Theft Auto (GTA) games have the same setting?",
+        "question": "Which Game Boy from the Game Boy series of portable video game consoles was released first?",
         "answers": [
-            "GTA V and GTA Vice City",
-            "GTA V and GTA San Andreas",
-            "GTA IV and GTA San Andreas",
-            "GTA IV and GTA Vice City"
+            "Game Boy Advance SP",
+            "Game Boy Micro",
+            "Game Boy Color",
+            "Game Boy Advance"
         ],
-        "correct": 2
+        "correct": 3
     },
     "1": {
-        "question": "In which state of America was the Fresh Prince of Bel-Air born and raised in?",
+        "question": "What year was the game Dishonored released?",
         "answers": [
-            "New Jersey",
-            "Pennsylvania",
-            "Florida",
-            "California"
+            "2012",
+            "2011",
+            "2008",
+            "2013"
         ],
-        "correct": 2
+        "correct": 1
     },
     "2": {
-        "question": "When was Minecraft first released to the public?",
+        "question": "What is the Capital of the United States?",
         "answers": [
-            "October 7th, 2011",
-            "September 17th, 2009",
-            "May 17th, 2009",
-            "November 18th, 2011"
-        ],
-        "correct": 3
-    },
-    "3": {
-        "question": "What is Cynophobia the fear of?",
-        "answers": [
-            "Flying",
-            "Germs",
-            "Birds",
-            "Dogs"
-        ],
-        "correct": 4
-    },
-    "4": {
-        "question": "In Super Mario Bros., who informs Mario that the princess is in another castle?",
-        "answers": [
-            "Bowser",
-            "Toad",
-            "Luigi",
-            "Yoshi"
+            "Los Angelas, CA",
+            "Washington, D.C.",
+            "Houston, TX",
+            "New York City, NY"
         ],
         "correct": 2
     },
-    "5": {
-        "question": "Which of these Elements is a metalloid?",
+    "3": {
+        "question": "Which Final Fantasy game consisted of a female-only cast of party members?",
         "answers": [
-            "Tin",
-            "Bromine",
-            "Rubidium",
-            "Antimony"
+            "Final Fantasy X-2",
+            "Final Fantasy V",
+            "Final Fantasy IX",
+            "Final Fantasy XIII-2"
+        ],
+        "correct": 1
+    },
+    "4": {
+        "question": "Jaguar Cars was previously owned by which car manfacturer?",
+        "answers": [
+            "Ford",
+            "Fiat",
+            "General Motors",
+            "Chrysler"
+        ],
+        "correct": 1
+    },
+    "5": {
+        "question": "Which of the following countries has a flag featuring a yellow lion wielding a sword on a dark red background?",
+        "answers": [
+            "Scotland",
+            "Sri Lanka",
+            "Bhutan",
+            "Kiribati"
+        ],
+        "correct": 2
+    },
+    "6": {
+        "question": "What was the name of the canceled projected by Blizzard Entertainment that would be later become Overwatch?",
+        "answers": [
+            "Titan",
+            "Omnic",
+            "Ghost",
+            "Omega"
+        ],
+        "correct": 1
+    },
+    "7": {
+        "question": "What caused the titular mascot of Yo-Kai Watch, Jibanyan, to become a yokai?",
+        "answers": [
+            "When he put on the harmaki",
+            "Ate one too many chocobars",
+            "Through a magical ritual",
+            "Being run over by a truck"
         ],
         "correct": 4
     },
-    "6": {
-        "question": "What Ultimate does Makoto Naegi, protagonist of Danganronpa: Trigger Happy Havoc, have? ",
-        "answers": [
-            "Ultimate Runner",
-            "Ultimate Detective",
-            "Ultimate Lucky Student",
-            "Ultimate Unlucky Student"
-        ],
-        "correct": 3
-    },
-    "7": {
-        "question": "Who is depicted on the US hundred dollar bill?",
-        "answers": [
-            "Abraham Lincoln",
-            "Thomas Jefferson",
-            "Benjamin Franklin",
-            "George Washington"
-        ],
-        "correct": 3
-    },
     "8": {
-        "question": "Which of the following car manufacturers had a war named after it?",
+        "question": "What does CPU stand for?",
         "answers": [
-            "Toyota",
-            "Ford",
-            "Volkswagen",
-            "Honda"
+            "Central Processing Unit",
+            "Central Process Unit",
+            "Central Processor Unit",
+            "Computer Personal Unit"
         ],
         "correct": 1
     },
     "9": {
-        "question": "What Nickelodeon game show featured a house on the set that the contestants would ransack to find hidden objects?",
+        "question": "Aubrey Graham is better known as",
         "answers": [
-            "Finders Keepers",
-            "Nick Arcade",
-            "Double Dare",
-            "Nickelodeon Guts"
-        ],
-        "correct": 1
-    },
-    "10": {
-        "question": "Which of the following Zelda games did not feature Ganon as a final boss?",
-        "answers": [
-            "Ocarina of Time",
-            "Skyward Sword",
-            "Majora&#039;s Mask",
-            "Breath of the Wild"
+            "2 Chainz",
+            "Travis Scott",
+            "Drake",
+            "Lil Wayne"
         ],
         "correct": 3
     },
-    "11": {
-        "question": "How many chromosomes are in your body cells?",
+    "10": {
+        "question": "What was the original name of Crash Bandicoot?",
         "answers": [
-            "21",
-            "23",
-            "24",
-            "22"
+            "Wally Wombat",
+            "Willie Wombat",
+            "Marvelous Mole",
+            "Coco Bandicoot"
         ],
         "correct": 2
     },
-    "12": {
-        "question": "Who is the lead singer of the British pop rock band Coldplay?",
+    "11": {
+        "question": "Which of these countries remained neutral during World War II?",
         "answers": [
-            "Will Champion",
-            "Chris Martin",
-            "Guy Berryman",
-            "Jonny Buckland"
+            "France",
+            "United Kingdom",
+            "Italy",
+            "Switzerland"
+        ],
+        "correct": 4
+    },
+    "12": {
+        "question": "In computing, what does MIDI stand for?",
+        "answers": [
+            "Modular Interface of Digital Instruments",
+            "Musical Instrument Digital Interface",
+            "Musical Interface of Digital Instruments",
+            "Musical Instrument Data Interface"
         ],
         "correct": 2
     },
     "13": {
-        "question": "Which American president appears on a one dollar bill?",
+        "question": "The longest shared border in the world can be found between which two nations?",
         "answers": [
-            "Thomas Jefferson",
-            "George Washington",
-            "Abraham Lincoln",
-            "Benjamin Franklin"
+            "India and Pakistan",
+            "Russia and China",
+            "Canada and the United States",
+            "Chile and Argentina"
         ],
-        "correct": 2
+        "correct": 3
     },
     "14": {
-        "question": "How old was Adolf Hitler when he died?",
+        "question": "What is the oldest Disney film?",
         "answers": [
-            "47",
-            "65",
-            "56",
-            "43"
+            "Fantasia",
+            "Pinocchio",
+            "Snow White and the Seven Dwarfs",
+            "Dumbo"
         ],
         "correct": 3
     },
     "15": {
-        "question": "How many people are in the U.S. House of Representatives?",
+        "question": "What does DNA stand for?",
         "answers": [
-            "415",
-            "260",
-            "50",
-            "435"
+            "Deoxyribogenetic Acid",
+            "Detoxic Acid",
+            "Deoxyribonucleic Acid",
+            "Deoxyribogenetic Atoms"
         ],
-        "correct": 4
+        "correct": 3
     },
     "16": {
-        "question": "Under what pseudonym did Stephen King publish five novels between 1977 and 1984?",
+        "question": "In an orchestra, what is the lowest member of the brass family?",
         "answers": [
-            "Richard Bachman",
-            "Mark Twain",
-            "J. D. Robb",
-            "Lewis Carroll"
+            "Tuba",
+            "Trombone",
+            "Contrabass",
+            "Bassoon"
         ],
         "correct": 1
     },
     "17": {
-        "question": "What is the capital of South Korea?",
+        "question": "Which of the following bones is not in the leg?",
         "answers": [
-            "Pyongyang",
-            "Seoul",
-            "Taegu",
-            "Kitakyushu"
+            "Fibula ",
+            "Radius",
+            "Patella",
+            "Tibia"
         ],
         "correct": 2
     },
     "18": {
-        "question": "What country is Cory in the House set in?",
+        "question": "Who is the main protagonist in the game Life is Strange: Before The Storm?",
         "answers": [
-            "The United States of America",
-            "England",
-            "Canada",
-            "Venezuala"
+            "Frank Bowers",
+            "Rachel Amber",
+            "Chloe Price ",
+            "Max Caulfield"
         ],
-        "correct": 1
+        "correct": 3
     },
     "19": {
-        "question": "How many soccer players should be on the field at the same time?",
+        "question": "The ancient Roman god of war was commonly known as which of the following?",
         "answers": [
-            "24",
-            "22",
-            "20",
-            "26"
+            "Ares",
+            "Jupiter",
+            "Juno",
+            "Mars"
         ],
-        "correct": 2
+        "correct": 4
     }
 }

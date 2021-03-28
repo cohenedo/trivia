@@ -1,5 +1,8 @@
 # Protocol Constants
 MSG_COMPONENTS = 3  # Exact number of components in every message: (conn, cmd, data)
+ANS_DATA_COMPONENTS = 2  # Exact number of components in every answer data (qid#ans)
+LOGIN_DATA_COMPONENTS = 2  # Exact number of components in every login data (username#password)
+QUESTION_DATA_COMPONENTS = 6  # Exact number of components in every question data (qid#question#ans1#...#ans4)
 CMD_FIELD_LENGTH = 16  # Exact length of cmd field (in bytes)
 LENGTH_FIELD_LENGTH = 4  # Exact length of length field (in bytes)
 MAX_DATA_LENGTH = 10 ** LENGTH_FIELD_LENGTH - 1  # Max size of data field according to protocol
@@ -7,32 +10,32 @@ MSG_HEADER_LENGTH = CMD_FIELD_LENGTH + 1 + LENGTH_FIELD_LENGTH + 1  # Exact size
 MAX_MSG_LENGTH = MSG_HEADER_LENGTH + MAX_DATA_LENGTH  # Max size of total message
 DELIMITER = "|"  # Delimiter character in protocol
 DATA_DELIMITER = "#"  # Delimiter in the data part of the message
-
-# Protocol Messages
-PROTOCOL_CLIENT = {
-    "login_msg": "LOGIN",
-    "logout_msg": "LOGOUT",
-    "logged_msg": "LOGGED",
-    "get_question_msg": "GET_QUESTION",
-    "send_answer_msg": "SEND_ANSWER",
-    "my_score_msg": "MY_SCORE",
-    "highscore_msg": "HIGHSCORE"
-}
-
-PROTOCOL_SERVER = {
-    "login_ok_msg": "LOGIN_OK",
-    "error_msg": "ERROR",
-    "logged_answer_msg": "LOGGED_ANSWER",
-    "your_question_msg": "YOUR_QUESTION",
-    "correct_answer_msg": "CORRECT_ANSWER",
-    "wrong_answer_msg": "WRONG_ANSWER",
-    "your_score_msg": "YOUR_SCORE",
-    "all_score_msg": "ALL_SCORE",
-    "no_questions_msg": "NO_QUESTIONS"
-}
-
-CMD_TYPES = list(PROTOCOL_CLIENT.values()) + list(PROTOCOL_SERVER.values())
 ERROR_RETURN = None  # returned in case of an error
+
+# Protocol Client Commands
+login_msg = "LOGIN"
+logout_msg = "LOGOUT"
+logged_msg = "LOGGED"
+get_question_msg = "GET_QUESTION"
+send_answer_msg = "SEND_ANSWER"
+my_score_msg = "MY_SCORE"
+highscore_msg = "HIGHSCORE"
+CLIENT_COMMANDS = [login_msg, logout_msg, logged_msg, get_question_msg, send_answer_msg,
+                   my_score_msg, my_score_msg, highscore_msg]
+
+# Protocol Server Commands
+login_ok_msg = "LOGIN_OK"
+error_msg = "ERROR"
+logged_answer_msg = "LOGGED_ANSWER"
+your_question_msg = "YOUR_QUESTION"
+correct_answer_msg = "CORRECT_ANSWER"
+wrong_answer_msg = "WRONG_ANSWER"
+your_score_msg = "YOUR_SCORE"
+all_score_msg = "ALL_SCORE"
+no_questions_msg = "NO_QUESTIONS"
+SERVER_COMMANDS = [login_ok_msg, error_msg, logged_answer_msg, your_question_msg,
+                   correct_answer_msg,
+                   wrong_answer_msg, your_score_msg, all_score_msg, no_questions_msg]
 
 
 def split_data(data, expected_fields):
@@ -68,7 +71,7 @@ def build_message(cmd, data):
     """
     data = str(data)
     data_length = len(data)
-    if data_length > MAX_DATA_LENGTH or cmd not in CMD_TYPES:
+    if data_length > MAX_DATA_LENGTH or cmd not in SERVER_COMMANDS + CLIENT_COMMANDS:
         return ERROR_RETURN
     for _ in range(CMD_FIELD_LENGTH - len(cmd)):
         cmd += ' '
@@ -101,7 +104,31 @@ def parse_message(msg):
         data_length = int(data_length.replace(" ", ""))
     except ValueError:
         return ERROR_RETURN, ERROR_RETURN
-    if data_length != len(data) or cmd not in CMD_TYPES:
+    if data_length != len(data) or cmd not in SERVER_COMMANDS + CLIENT_COMMANDS:
         return ERROR_RETURN, ERROR_RETURN
 
     return cmd, data
+
+
+def build_login_data(username, password):
+    return username + "#" + password
+
+
+def build_question(q_num, question, answers):
+    return join_data([q_num] + [question] + answers), q_num
+
+
+def parse_answer(data):
+    return split_data(data, ANS_DATA_COMPONENTS)
+
+
+def parse_login(data):
+    return split_data(data, LOGIN_DATA_COMPONENTS)
+
+
+def parse_question(question):
+    return split_data(question, QUESTION_DATA_COMPONENTS)
+
+
+def build_answer(qid, answer):
+    return join_data([qid, answer])
