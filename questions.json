@@ -1,202 +1,202 @@
 {
     "0": {
-        "question": "The body of the Egyptian Sphinx was based on which animal?",
+        "question": "Which Game Boy from the Game Boy series of portable video game consoles was released first?",
         "answers": [
-            "Lion",
-            "Bull",
-            "Horse",
-            "Dog"
+            "Game Boy Advance SP",
+            "Game Boy Micro",
+            "Game Boy Color",
+            "Game Boy Advance"
         ],
-        "correct": 1
+        "correct": 3
     },
     "1": {
-        "question": "What is the nickname for the US state Delaware?",
+        "question": "What year was the game Dishonored released?",
         "answers": [
-            "The Fiftieth State",
-            "The First State",
-            "The Sixteenth State",
-            "The Second State"
+            "2012",
+            "2011",
+            "2008",
+            "2013"
         ],
-        "correct": 2
+        "correct": 1
     },
     "2": {
-        "question": "The collapse of the Soviet Union took place in which year?",
+        "question": "What is the Capital of the United States?",
         "answers": [
-            "1991",
-            "1992",
-            "1891",
-            "1990"
-        ],
-        "correct": 1
-    },
-    "3": {
-        "question": "What Nickelodeon game show featured a house on the set that the contestants would ransack to find hidden objects?",
-        "answers": [
-            "Nick Arcade",
-            "Finders Keepers",
-            "Double Dare",
-            "Nickelodeon Guts"
+            "Los Angelas, CA",
+            "Washington, D.C.",
+            "Houston, TX",
+            "New York City, NY"
         ],
         "correct": 2
     },
-    "4": {
-        "question": "What does the United States of America celebrate during the 4th of July?",
+    "3": {
+        "question": "Which Final Fantasy game consisted of a female-only cast of party members?",
         "answers": [
-            "The anniversary of the Battle of Gettysburg",
-            "The crossing of the Delaware River",
-            "The ratification of the Constitution",
-            "The signing of the Declaration of Independence"
-        ],
-        "correct": 4
-    },
-    "5": {
-        "question": "What was the title of the first Bond movie, released in 1962?",
-        "answers": [
-            "Goldfinger",
-            "From Russia with Love",
-            "Dr. No",
-            "Thunderball"
-        ],
-        "correct": 3
-    },
-    "6": {
-        "question": "What war is Call Of Duty: Black Ops based on?",
-        "answers": [
-            "Vietnam",
-            "WW3",
-            "WW1",
-            "Cold War"
-        ],
-        "correct": 4
-    },
-    "7": {
-        "question": "In Greek mythology, who is the god of wine?",
-        "answers": [
-            "Demeter",
-            "Hephaestus",
-            "Dionysus",
-            "Apollo"
-        ],
-        "correct": 3
-    },
-    "8": {
-        "question": "Which of these songs by Skrillex features Fatman Scoop as a side artist?",
-        "answers": [
-            "All is Fair in Love and Brostep",
-            "Scary Monsters and Nice Sprites",
-            "Rock N Roll (Will Take You to the Mountain)",
-            "Recess"
-        ],
-        "correct": 4
-    },
-    "9": {
-        "question": "What was the name of the teenage witch played by Melisa Joan Hart who lives with her witch aunts Hilda and Zelda?",
-        "answers": [
-            "Hermione",
-            "Dahlia",
-            "Dorothy",
-            "Sabrina"
-        ],
-        "correct": 4
-    },
-    "10": {
-        "question": "Area 51 is located in which US state?",
-        "answers": [
-            "Nevada",
-            "Utah",
-            "New Mexico",
-            "Arizona"
+            "Final Fantasy X-2",
+            "Final Fantasy V",
+            "Final Fantasy IX",
+            "Final Fantasy XIII-2"
         ],
         "correct": 1
     },
-    "11": {
-        "question": "Who is the creator of Touhou project?",
+    "4": {
+        "question": "Jaguar Cars was previously owned by which car manfacturer?",
         "answers": [
-            "Jun",
-            "Twilight Frontier",
-            "Tasofro",
-            "Zun"
+            "Ford",
+            "Fiat",
+            "General Motors",
+            "Chrysler"
+        ],
+        "correct": 1
+    },
+    "5": {
+        "question": "Which of the following countries has a flag featuring a yellow lion wielding a sword on a dark red background?",
+        "answers": [
+            "Scotland",
+            "Sri Lanka",
+            "Bhutan",
+            "Kiribati"
+        ],
+        "correct": 2
+    },
+    "6": {
+        "question": "What was the name of the canceled projected by Blizzard Entertainment that would be later become Overwatch?",
+        "answers": [
+            "Titan",
+            "Omnic",
+            "Ghost",
+            "Omega"
+        ],
+        "correct": 1
+    },
+    "7": {
+        "question": "What caused the titular mascot of Yo-Kai Watch, Jibanyan, to become a yokai?",
+        "answers": [
+            "When he put on the harmaki",
+            "Ate one too many chocobars",
+            "Through a magical ritual",
+            "Being run over by a truck"
+        ],
+        "correct": 4
+    },
+    "8": {
+        "question": "What does CPU stand for?",
+        "answers": [
+            "Central Processing Unit",
+            "Central Process Unit",
+            "Central Processor Unit",
+            "Computer Personal Unit"
+        ],
+        "correct": 1
+    },
+    "9": {
+        "question": "Aubrey Graham is better known as",
+        "answers": [
+            "2 Chainz",
+            "Travis Scott",
+            "Drake",
+            "Lil Wayne"
+        ],
+        "correct": 3
+    },
+    "10": {
+        "question": "What was the original name of Crash Bandicoot?",
+        "answers": [
+            "Wally Wombat",
+            "Willie Wombat",
+            "Marvelous Mole",
+            "Coco Bandicoot"
+        ],
+        "correct": 2
+    },
+    "11": {
+        "question": "Which of these countries remained neutral during World War II?",
+        "answers": [
+            "France",
+            "United Kingdom",
+            "Italy",
+            "Switzerland"
         ],
         "correct": 4
     },
     "12": {
-        "question": "What is the speed of light in a vacuum?",
+        "question": "In computing, what does MIDI stand for?",
         "answers": [
-            "308,215,043 m/s",
-            "751,665,014,151 m/s",
-            "299,792,458 m/s",
-            "50,461 m/s"
+            "Modular Interface of Digital Instruments",
+            "Musical Instrument Digital Interface",
+            "Musical Interface of Digital Instruments",
+            "Musical Instrument Data Interface"
         ],
-        "correct": 3
+        "correct": 2
     },
     "13": {
-        "question": "In Final Fantasy XIV, what is the name of the Deep Dungeon that was introduced in the expansion pack, Heavensward?",
+        "question": "The longest shared border in the world can be found between which two nations?",
         "answers": [
-            "Sunken Temple of Qarn",
-            "Aetherochemical Research Facility",
-            "Palace of the Dead",
-            "Heaven on High"
+            "India and Pakistan",
+            "Russia and China",
+            "Canada and the United States",
+            "Chile and Argentina"
         ],
         "correct": 3
     },
     "14": {
-        "question": "When was the DVD invented?",
+        "question": "What is the oldest Disney film?",
         "answers": [
-            "1980",
-            "1990",
-            "2000",
-            "1995"
+            "Fantasia",
+            "Pinocchio",
+            "Snow White and the Seven Dwarfs",
+            "Dumbo"
         ],
-        "correct": 4
+        "correct": 3
     },
     "15": {
-        "question": "What Nationality is D.Va from Overwatch?",
+        "question": "What does DNA stand for?",
         "answers": [
-            "Japanese",
-            "Korean",
-            "Chinese",
-            "Vietnamese "
+            "Deoxyribogenetic Acid",
+            "Detoxic Acid",
+            "Deoxyribonucleic Acid",
+            "Deoxyribogenetic Atoms"
         ],
-        "correct": 2
+        "correct": 3
     },
     "16": {
-        "question": "What is the largest country in the world?",
+        "question": "In an orchestra, what is the lowest member of the brass family?",
         "answers": [
-            "Canada",
-            "China",
-            "United States",
-            "Russia"
+            "Tuba",
+            "Trombone",
+            "Contrabass",
+            "Bassoon"
         ],
-        "correct": 4
+        "correct": 1
     },
     "17": {
-        "question": "Which company did Gabe Newell work at before founding Valve Corporation?",
+        "question": "Which of the following bones is not in the leg?",
         "answers": [
-            "Yahoo",
-            "Microsoft",
-            "Apple",
-            "Google"
+            "Fibula ",
+            "Radius",
+            "Patella",
+            "Tibia"
         ],
         "correct": 2
     },
     "18": {
-        "question": "Who is the main antagonist in the Portal franchise?",
+        "question": "Who is the main protagonist in the game Life is Strange: Before The Storm?",
         "answers": [
-            "GLaDOS",
-            "Wheatley",
-            "Rick",
-            "Chell"
+            "Frank Bowers",
+            "Rachel Amber",
+            "Chloe Price ",
+            "Max Caulfield"
         ],
-        "correct": 1
+        "correct": 3
     },
     "19": {
-        "question": "In the Naruto manga, what is the last name of Tsunade?",
+        "question": "The ancient Roman god of war was commonly known as which of the following?",
         "answers": [
-            "Haruno",
-            "Senju",
-            "Uzumaki",
-            "Yamanaka"
+            "Ares",
+            "Jupiter",
+            "Juno",
+            "Mars"
         ],
-        "correct": 2
+        "correct": 4
     }
 }

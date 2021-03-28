@@ -4,8 +4,8 @@ import chatlib
 SERVER_IP = "127.0.0.1"  # Our server will run on same computer as client
 SERVER_PORT = 5678
 ANSWER_OPTIONS = [1, 2, 3, 4]
-QUESTION_COMPONENTS = {"id": 0, "question": 1, "answer1": 2, "answer2": 3,
-                       "answer3": 4, "answer4": 5}
+QUESTION_COMPONENTS = {"id": 0, "question": 1, "answer1": 2, "answer2": 3, "answer3": 4, "answer4": 5}
+MAX_MSG_LENGTH = 1024
 
 
 def build_and_send_message(conn, cmd, data=""):
@@ -28,8 +28,20 @@ def recv_message_and_parse(conn):
     :return: cmd (str) and data (str) of the received message.
              If error occurred, will return None, None
     """
-    cmd, data = chatlib.parse_message(conn.recv(1024).decode())
+    cmd, data = chatlib.parse_message(conn.recv(MAX_MSG_LENGTH).decode())
     return cmd, data
+
+
+def build_send_recv_parse(conn, cmd, data=""):
+    """
+    build message, send it and return parsed message
+    :param conn: socket object
+    :param cmd: command matching the protocol
+    :param data: content to be sent, may be empty("")
+    :return: cmd (str), data (str)
+    """
+    build_and_send_message(conn, cmd, data)
+    return recv_message_and_parse(conn)
 
 
 def connect():
@@ -42,7 +54,7 @@ def connect():
     return conn
 
 
-def error_and_exit(error_msg):
+def error_and_exit(error_msg="error occurred"):
     print(error_msg)
     exit()
 
@@ -57,9 +69,7 @@ def login(conn):
     while cmd != "LOGIN_OK":
         username = input("Please enter username: \n")
         password = input("Please enter password: \n")
-        build_and_send_message(conn, chatlib.login_msg, username + "#" + password)
-        # conn.send(build_login
-        cmd, data = recv_message_and_parse(conn)
+        cmd, data = build_send_recv_parse(conn, chatlib.login_msg, chatlib.build_login_data(username, password))
         if cmd != "LOGIN_OK":
             print(data)
     print("Logged in!")
@@ -77,20 +87,8 @@ def logout(conn):
     return
 
 
-def build_send_recv_parse(conn, cmd, data):
-    """
-    build message, send it and return parsed message
-    :param conn: socket object
-    :param cmd: command matching the protocol
-    :param data: content to be sent, may be empty("")
-    :return: cmd (str), data (str)
-    """
-    build_and_send_message(conn, cmd, data)
-    return recv_message_and_parse(conn)
-
-
 def get_score(conn):
-    cmd, my_score = build_send_recv_parse(conn, chatlib.my_score_msg, "")
+    cmd, my_score = build_send_recv_parse(conn, chatlib.my_score_msg)
     if cmd == chatlib.your_score_msg:
         print("Your score is: " + my_score)
         return
@@ -98,31 +96,35 @@ def get_score(conn):
 
 
 def get_highscore(conn):
-    cmd, highscore = build_send_recv_parse(conn, chatlib.highscore_msg, "")
+    cmd, highscore = build_send_recv_parse(conn, chatlib.highscore_msg)
     if cmd == chatlib.all_score_msg:
         print(highscore)
         return
     error_and_exit("Error: could not get highscore")
 
 
-# noinspection DuplicatedCode
+def print_question(question):
+    s = ""
+    for i in range(1, len(question)):
+        if i > 1:
+            s = s + (str(i - 1) + ". " + str(question[i])) + "\n"
+        else:
+            s = s + str(question[i]) + "\n"
+    print(s)
+
+
 def play_question(conn):
     """
     Get question, send user's answer, get and print feedback
     :param conn:
     :return:
     """
-    cmd, question = build_send_recv_parse(conn, chatlib.get_question_msg, "")
+    cmd, question = build_send_recv_parse(conn, chatlib.get_question_msg)
     if cmd == chatlib.no_questions_msg:
         print("GAME OVER: No more question to show.")
         return
-
-    question = chatlib.split_data(question, 6)  # print question
-    for i in range(1, len(question)):
-        if i > 1:
-            print(str(i - 1) + ". " + str(question[i]))
-        else:
-            print(question[i])
+    question = chatlib.parse_question(question)
+    print_question(question)
 
     while True:  # get answer from user
         answer = input("Please choose the correct answer (1-4)\n")
@@ -137,58 +139,22 @@ def play_question(conn):
             continue
 
     # send answer and get feedback (correct / wrong)
-    answer = [question[QUESTION_COMPONENTS["id"]], answer]
-    answer = chatlib.join_data(answer)
+    answer = chatlib.build_answer(question[QUESTION_COMPONENTS["id"]], answer)
     cmd, correct_answer = build_send_recv_parse(conn, chatlib.send_answer_msg, answer)
     if cmd == chatlib.correct_answer_msg:
         print("Correct!")
     elif cmd == chatlib.wrong_answer_msg:
         print("Wrong answer, Correct answer is: " + question[1 + int(correct_answer)])
     else:
-        error_and_exit("error occurred")
-
-
-# noinspection DuplicatedCode
-def play_question2(conn):
-    """
-    Get question, send user's answer, get and print feedback
-    :param conn:
-    :return:
-    """
-    cmd, question = build_send_recv_parse(conn, chatlib.get_question_msg, "")
-    if cmd == chatlib.no_questions_msg:
-        print("GAME OVER: No more question to show.")
-        return
-
-    question = chatlib.split_data(question, 6)  # print question
-    for i in range(1, len(question)):
-        if i > 1:
-            print(str(i - 1) + ". " + str(question[i]))
-        else:
-            print(question[i])
-
-    # send answer and get feedback (correct / wrong)
-    for i in range(100):
-        for j in range(1, 5):
-            answer = j
-            answer = [question[QUESTION_COMPONENTS["id"]], answer]
-            answer = chatlib.join_data(answer)
-            cmd, correct_answer = build_send_recv_parse(conn, chatlib.send_answer_msg, answer)
-            if cmd == chatlib.correct_answer_msg:
-                print("Correct!")
-            elif cmd == chatlib.wrong_answer_msg:
-                print("Wrong answer, Correct answer is: " + question[1 + int(correct_answer)])
-            else:
-                error_and_exit("error occurred")
+        error_and_exit("Error playing question")
 
 
 def get_logged_user(conn):
-    cmd, logged = build_send_recv_parse(conn, chatlib.logged_msg, "")
+    cmd, data = build_send_recv_parse(conn, chatlib.logged_msg)
     if cmd == chatlib.logged_answer_msg:
-        print(logged)
+        print(data)
         return
-    print("Error occurred")
-    return
+    error_and_exit("Error getting logged users")
 
 
 def main():

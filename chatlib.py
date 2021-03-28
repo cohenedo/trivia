@@ -1,5 +1,8 @@
 # Protocol Constants
 MSG_COMPONENTS = 3  # Exact number of components in every message: (conn, cmd, data)
+ANS_DATA_COMPONENTS = 2  # Exact number of components in every answer data (qid#ans)
+LOGIN_DATA_COMPONENTS = 2  # Exact number of components in every login data (username#password)
+QUESTION_DATA_COMPONENTS = 6  # Exact number of components in every question data (qid#question#ans1#...#ans4)
 CMD_FIELD_LENGTH = 16  # Exact length of cmd field (in bytes)
 LENGTH_FIELD_LENGTH = 4  # Exact length of length field (in bytes)
 MAX_DATA_LENGTH = 10 ** LENGTH_FIELD_LENGTH - 1  # Max size of data field according to protocol
@@ -30,7 +33,8 @@ wrong_answer_msg = "WRONG_ANSWER"
 your_score_msg = "YOUR_SCORE"
 all_score_msg = "ALL_SCORE"
 no_questions_msg = "NO_QUESTIONS"
-SERVER_COMMANDS = [login_ok_msg, error_msg, logged_answer_msg, your_question_msg, correct_answer_msg,
+SERVER_COMMANDS = [login_ok_msg, error_msg, logged_answer_msg, your_question_msg,
+                   correct_answer_msg,
                    wrong_answer_msg, your_score_msg, all_score_msg, no_questions_msg]
 
 
@@ -106,13 +110,25 @@ def parse_message(msg):
     return cmd, data
 
 
+def build_login_data(username, password):
+    return username + "#" + password
+
+
 def build_question(q_num, question, answers):
     return join_data([q_num] + [question] + answers), q_num
 
 
 def parse_answer(data):
-    return split_data(data, 2)
+    return split_data(data, ANS_DATA_COMPONENTS)
 
 
 def parse_login(data):
-    return split_data(data, 2)
+    return split_data(data, LOGIN_DATA_COMPONENTS)
+
+
+def parse_question(question):
+    return split_data(question, QUESTION_DATA_COMPONENTS)
+
+
+def build_answer(qid, answer):
+    return join_data([qid, answer])
