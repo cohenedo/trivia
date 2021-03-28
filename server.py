@@ -16,8 +16,8 @@ QUESTIONS_JSON = "questions.json"
 USERS_JSON = "users.json"
 SERVER_IP = "127.0.0.1"
 SERVER_PORT = 5678
-MAX_MSG_LENGTH = 1024
 QUESTIONS_TO_LOAD = 20
+MAX_MSG_LENGTH = 1024
 
 parser = argparse.ArgumentParser(description="Play a trivia game")
 parser.add_argument("-r", "--reset", action="store_true", help="reset user and questions db")
@@ -59,7 +59,7 @@ def recv_message_and_parse(conn):
     :return: cmd (str) and data (str) of the received message.
              If error occurred, will return None, None
     """
-    msg = conn.recv(1024).decode()
+    msg = conn.recv(MAX_MSG_LENGTH).decode()
     print("[CLIENT] ", conn.getpeername(), msg)  # Debug print
     cmd, data = chatlib.parse_message(msg)
     return cmd, data
@@ -160,37 +160,36 @@ def create_random_question(username):
     """
     global users
     global questions
-    if set(users[username]["questions_asked"]) == set(questions.keys()):
+    if set(users[username]["questions_asked"]) == set(questions.keys()):  # check user has unanswered questions
         return None, None
     while True:
         q_num, value = random.choice(list(questions.items()))
         if q_num not in users[username]["questions_asked"]:
             question = value["question"]
             answers = value["answers"]
-            return chatlib.join_data([q_num] + [question] + answers), q_num
+            return chatlib.build_question(q_num, question, answers)
 
 
-def handle_question_message(conn, username):
+def handle_question_message(conn):
     """
     Send question to client using create_random_question()
-    :param username: user asking for a question
     :param conn: socket object
     :return:
     """
     global questions
+    username = get_username(conn)
     (question, q_num) = create_random_question(username)
     if question is None:
-        build_and_append_to_outbox(conn, chatlib.PROTOCOL_SERVER["no_questions_msg"], "")
+        build_and_append_to_outbox(conn, chatlib.no_questions_msg, "")
     else:
-        build_and_append_to_outbox(conn, chatlib.PROTOCOL_SERVER["your_question_msg"], question)
+        build_and_append_to_outbox(conn, chatlib.your_question_msg, question)
         users[username]["questions_asked"].append(q_num)
     return
 
 
-def handle_answer_message(conn, data, username):
+def handle_answer_message(conn, data):
     """
     return feedback for user answer: correct / wrong
-    :param username: username (str)
     :param conn: socket object
     :param data: qid#choice
     :return:
@@ -198,33 +197,32 @@ def handle_answer_message(conn, data, username):
     global logged_users
     global users
     global questions
+    username = get_username(conn)
 
-    qid, choice = chatlib.split_data(data, 2)
+    qid, choice = chatlib.parse_answer(data)
     choice = int(choice)
     print("correct is", questions[qid]["correct"])
-    if qid in users[username][
-        "questions_answered"]:  # ensure user is only submitting one answer for each question
+    if qid in users[username]["questions_answered"]:  # ensure user is only submitting one answer for each question
         handle_error(conn, "You may only answer question once")
     elif questions[qid]["correct"] == choice:  # correct answer
         users[username]["score"] += 1
-        build_and_append_to_outbox(conn, chatlib.PROTOCOL_SERVER["correct_answer_msg"], "")
+        build_and_append_to_outbox(conn, chatlib.correct_answer_msg, "")
     else:  # wrong answer
-        build_and_append_to_outbox(conn, chatlib.PROTOCOL_SERVER["wrong_answer_msg"],
+        build_and_append_to_outbox(conn, chatlib.wrong_answer_msg,
                                    questions[qid]["correct"])
     users[username]["questions_answered"].append(qid)
     return
 
 
-def handle_getscore_message(conn, username):
+def handle_getscore_message(conn):
     """
     Send score to user
-    :param username: username asking (str)
     :param conn: socket object
     :return:
     """
     global users
-    build_and_append_to_outbox(conn, chatlib.PROTOCOL_SERVER["your_score_msg"],
-                               users[username]["score"])
+    username = get_username(conn)
+    build_and_append_to_outbox(conn, chatlib.your_score_msg, users[username]["score"])
 
 
 def handle_highscore_message(conn):
@@ -239,7 +237,7 @@ def handle_highscore_message(conn):
     s = ''
     for tup in scores:
         s = s + str(tup[0]) + ": " + str(tup[1]) + "\n"
-    build_and_append_to_outbox(conn, chatlib.PROTOCOL_SERVER["all_score_msg"], s)
+    build_and_append_to_outbox(conn, chatlib.all_score_msg, s)
 
 
 def handle_error(conn, error_msg):
@@ -249,7 +247,7 @@ def handle_error(conn, error_msg):
     :return: messages_to_send
     """
     global messages_to_send
-    build_and_append_to_outbox(conn, chatlib.PROTOCOL_SERVER["error_msg"], error_msg)
+    build_and_append_to_outbox(conn, chatliberror_msg, error_msg)
     return
 
 
@@ -264,7 +262,7 @@ def handle_login_message(conn, data):
     global messages_to_send
     global users
 
-    [username, password] = chatlib.split_data(data, 2)
+    username, password = chatlib.parse_login(data)
     if username is None or password is None:
         handle_error(conn, "invalid input")
     elif username not in users or password != users[username]["password"]:
@@ -272,7 +270,7 @@ def handle_login_message(conn, data):
     elif username in logged_users.values():
         handle_error(conn, "user already logged in")
     else:
-        build_and_append_to_outbox(conn, chatlib.PROTOCOL_SERVER["login_ok_msg"], "")
+        build_and_append_to_outbox(conn, chatlib.login_ok_msg, "")
         logged_users[conn.getpeername()] = username
     return
 
@@ -304,7 +302,7 @@ def handle_logged_message(conn):
     global logged_users
     users_list = [value for value in logged_users.values()]
     s = ", ".join(users_list)
-    build_and_append_to_outbox(conn, chatlib.PROTOCOL_SERVER["logged_answer_msg"], s)
+    build_and_append_to_outbox(conn, chatlib.logged_answer_msg, s)
 
 
 def handle_client_message(conn, cmd, data):
@@ -319,25 +317,23 @@ def handle_client_message(conn, cmd, data):
     global users
     global questions
 
-    if cmd == chatlib.PROTOCOL_CLIENT[
-        "login_msg"] and conn.getpeername() not in logged_users.keys():  # log in user
+    if cmd == chatlib.login_msg and conn.getpeername() not in logged_users.keys():  # log in user
         handle_login_message(conn, data)
     elif conn.getpeername() in logged_users:  # user is logged in
-        username = get_username(conn)
-        if cmd == chatlib.PROTOCOL_CLIENT["get_question_msg"]:
-            handle_question_message(conn, username)
-        elif cmd == chatlib.PROTOCOL_CLIENT["send_answer_msg"]:
-            handle_answer_message(conn, data, username)
-        elif cmd == chatlib.PROTOCOL_CLIENT["logged_msg"]:
+        if cmd == chatlib.get_question_msg:
+            handle_question_message(conn)
+        elif cmd == chatlib.send_answer_msg:
+            handle_answer_message(conn, data)
+        elif cmd == chatlib.logged_msg:
             handle_logged_message(conn)
-        elif cmd == chatlib.PROTOCOL_CLIENT["my_score_msg"]:
-            handle_getscore_message(conn, username)
-        elif cmd == chatlib.PROTOCOL_CLIENT["highscore_msg"]:
+        elif cmd == chatlib.my_score_msg:
+            handle_getscore_message(conn)
+        elif cmd == chatlib.highscore_msg:
             handle_highscore_message(conn)
-        else:  # (cmd is None and data is None) or (cmd == chatlib.PROTOCOL_CLIENT["logout_msg"]):
+        else:  # (cmd is None and data is None) or (cmd == chatlib.logout_msg):
             handle_logout_message(conn)
 
-    else:  # cmd not in chatlib.PROTOCOL_CLIENT.values():
+    else:
         handle_error(conn, "Error: undefined command")
     return
 
