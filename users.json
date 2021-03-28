@@ -7,9 +7,15 @@
     },
     "user2": {
         "password": "pass2",
-        "score": 0,
-        "questions_asked": [],
-        "questions_answered": []
+        "score": 1,
+        "questions_asked": [
+            "3",
+            "17"
+        ],
+        "questions_answered": [
+            "3",
+            "17"
+        ]
     },
     "user3": {
         "password": "pass3",

@@ -8,7 +8,7 @@ QUESTION_COMPONENTS = {"id": 0, "question": 1, "answer1": 2, "answer2": 3,
                        "answer3": 4, "answer4": 5}
 
 
-def build_and_send_message(conn, cmd, data):
+def build_and_send_message(conn, cmd, data=""):
     """
     Builds a new message using chatlib and sends it.
     :param conn: message destination (socket object)
@@ -58,6 +58,7 @@ def login(conn):
         username = input("Please enter username: \n")
         password = input("Please enter password: \n")
         build_and_send_message(conn, chatlib.PROTOCOL_CLIENT["login_msg"], username + "#" + password)
+        # conn.send(build_login
         cmd, data = recv_message_and_parse(conn)
         if cmd != "LOGIN_OK":
             print(data)
@@ -71,7 +72,7 @@ def logout(conn):
     :param conn: socket object
     :return:
     """
-    build_and_send_message(conn, chatlib.PROTOCOL_CLIENT["logout_msg"], "")
+    build_and_send_message(conn, chatlib.PROTOCOL_CLIENT["logout_msg"])
     print("Logged out")
     return
 

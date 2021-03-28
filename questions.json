@@ -1,201 +1,201 @@
 {
     "0": {
-        "question": "Which Grand Theft Auto (GTA) games have the same setting?",
+        "question": "The body of the Egyptian Sphinx was based on which animal?",
         "answers": [
-            "GTA V and GTA Vice City",
-            "GTA V and GTA San Andreas",
-            "GTA IV and GTA San Andreas",
-            "GTA IV and GTA Vice City"
+            "Lion",
+            "Bull",
+            "Horse",
+            "Dog"
         ],
-        "correct": 2
+        "correct": 1
     },
     "1": {
-        "question": "In which state of America was the Fresh Prince of Bel-Air born and raised in?",
+        "question": "What is the nickname for the US state Delaware?",
         "answers": [
-            "New Jersey",
-            "Pennsylvania",
-            "Florida",
-            "California"
+            "The Fiftieth State",
+            "The First State",
+            "The Sixteenth State",
+            "The Second State"
         ],
         "correct": 2
     },
     "2": {
-        "question": "When was Minecraft first released to the public?",
+        "question": "The collapse of the Soviet Union took place in which year?",
         "answers": [
-            "October 7th, 2011",
-            "September 17th, 2009",
-            "May 17th, 2009",
-            "November 18th, 2011"
+            "1991",
+            "1992",
+            "1891",
+            "1990"
         ],
-        "correct": 3
+        "correct": 1
     },
     "3": {
-        "question": "What is Cynophobia the fear of?",
+        "question": "What Nickelodeon game show featured a house on the set that the contestants would ransack to find hidden objects?",
         "answers": [
-            "Flying",
-            "Germs",
-            "Birds",
-            "Dogs"
-        ],
-        "correct": 4
-    },
-    "4": {
-        "question": "In Super Mario Bros., who informs Mario that the princess is in another castle?",
-        "answers": [
-            "Bowser",
-            "Toad",
-            "Luigi",
-            "Yoshi"
+            "Nick Arcade",
+            "Finders Keepers",
+            "Double Dare",
+            "Nickelodeon Guts"
         ],
         "correct": 2
     },
-    "5": {
-        "question": "Which of these Elements is a metalloid?",
+    "4": {
+        "question": "What does the United States of America celebrate during the 4th of July?",
         "answers": [
-            "Tin",
-            "Bromine",
-            "Rubidium",
-            "Antimony"
+            "The anniversary of the Battle of Gettysburg",
+            "The crossing of the Delaware River",
+            "The ratification of the Constitution",
+            "The signing of the Declaration of Independence"
         ],
         "correct": 4
     },
-    "6": {
-        "question": "What Ultimate does Makoto Naegi, protagonist of Danganronpa: Trigger Happy Havoc, have? ",
+    "5": {
+        "question": "What was the title of the first Bond movie, released in 1962?",
         "answers": [
-            "Ultimate Runner",
-            "Ultimate Detective",
-            "Ultimate Lucky Student",
-            "Ultimate Unlucky Student"
+            "Goldfinger",
+            "From Russia with Love",
+            "Dr. No",
+            "Thunderball"
         ],
         "correct": 3
     },
-    "7": {
-        "question": "Who is depicted on the US hundred dollar bill?",
+    "6": {
+        "question": "What war is Call Of Duty: Black Ops based on?",
         "answers": [
-            "Abraham Lincoln",
-            "Thomas Jefferson",
-            "Benjamin Franklin",
-            "George Washington"
+            "Vietnam",
+            "WW3",
+            "WW1",
+            "Cold War"
+        ],
+        "correct": 4
+    },
+    "7": {
+        "question": "In Greek mythology, who is the god of wine?",
+        "answers": [
+            "Demeter",
+            "Hephaestus",
+            "Dionysus",
+            "Apollo"
         ],
         "correct": 3
     },
     "8": {
-        "question": "Which of the following car manufacturers had a war named after it?",
+        "question": "Which of these songs by Skrillex features Fatman Scoop as a side artist?",
         "answers": [
-            "Toyota",
-            "Ford",
-            "Volkswagen",
-            "Honda"
-        ],
-        "correct": 1
-    },
-    "9": {
-        "question": "What Nickelodeon game show featured a house on the set that the contestants would ransack to find hidden objects?",
-        "answers": [
-            "Finders Keepers",
-            "Nick Arcade",
-            "Double Dare",
-            "Nickelodeon Guts"
-        ],
-        "correct": 1
-    },
-    "10": {
-        "question": "Which of the following Zelda games did not feature Ganon as a final boss?",
-        "answers": [
-            "Ocarina of Time",
-            "Skyward Sword",
-            "Majora&#039;s Mask",
-            "Breath of the Wild"
-        ],
-        "correct": 3
-    },
-    "11": {
-        "question": "How many chromosomes are in your body cells?",
-        "answers": [
-            "21",
-            "23",
-            "24",
-            "22"
-        ],
-        "correct": 2
-    },
-    "12": {
-        "question": "Who is the lead singer of the British pop rock band Coldplay?",
-        "answers": [
-            "Will Champion",
-            "Chris Martin",
-            "Guy Berryman",
-            "Jonny Buckland"
-        ],
-        "correct": 2
-    },
-    "13": {
-        "question": "Which American president appears on a one dollar bill?",
-        "answers": [
-            "Thomas Jefferson",
-            "George Washington",
-            "Abraham Lincoln",
-            "Benjamin Franklin"
-        ],
-        "correct": 2
-    },
-    "14": {
-        "question": "How old was Adolf Hitler when he died?",
-        "answers": [
-            "47",
-            "65",
-            "56",
-            "43"
-        ],
-        "correct": 3
-    },
-    "15": {
-        "question": "How many people are in the U.S. House of Representatives?",
-        "answers": [
-            "415",
-            "260",
-            "50",
-            "435"
+            "All is Fair in Love and Brostep",
+            "Scary Monsters and Nice Sprites",
+            "Rock N Roll (Will Take You to the Mountain)",
+            "Recess"
         ],
         "correct": 4
     },
-    "16": {
-        "question": "Under what pseudonym did Stephen King publish five novels between 1977 and 1984?",
+    "9": {
+        "question": "What was the name of the teenage witch played by Melisa Joan Hart who lives with her witch aunts Hilda and Zelda?",
         "answers": [
-            "Richard Bachman",
-            "Mark Twain",
-            "J. D. Robb",
-            "Lewis Carroll"
+            "Hermione",
+            "Dahlia",
+            "Dorothy",
+            "Sabrina"
+        ],
+        "correct": 4
+    },
+    "10": {
+        "question": "Area 51 is located in which US state?",
+        "answers": [
+            "Nevada",
+            "Utah",
+            "New Mexico",
+            "Arizona"
         ],
         "correct": 1
     },
-    "17": {
-        "question": "What is the capital of South Korea?",
+    "11": {
+        "question": "Who is the creator of Touhou project?",
         "answers": [
-            "Pyongyang",
-            "Seoul",
-            "Taegu",
-            "Kitakyushu"
+            "Jun",
+            "Twilight Frontier",
+            "Tasofro",
+            "Zun"
+        ],
+        "correct": 4
+    },
+    "12": {
+        "question": "What is the speed of light in a vacuum?",
+        "answers": [
+            "308,215,043 m/s",
+            "751,665,014,151 m/s",
+            "299,792,458 m/s",
+            "50,461 m/s"
+        ],
+        "correct": 3
+    },
+    "13": {
+        "question": "In Final Fantasy XIV, what is the name of the Deep Dungeon that was introduced in the expansion pack, Heavensward?",
+        "answers": [
+            "Sunken Temple of Qarn",
+            "Aetherochemical Research Facility",
+            "Palace of the Dead",
+            "Heaven on High"
+        ],
+        "correct": 3
+    },
+    "14": {
+        "question": "When was the DVD invented?",
+        "answers": [
+            "1980",
+            "1990",
+            "2000",
+            "1995"
+        ],
+        "correct": 4
+    },
+    "15": {
+        "question": "What Nationality is D.Va from Overwatch?",
+        "answers": [
+            "Japanese",
+            "Korean",
+            "Chinese",
+            "Vietnamese "
+        ],
+        "correct": 2
+    },
+    "16": {
+        "question": "What is the largest country in the world?",
+        "answers": [
+            "Canada",
+            "China",
+            "United States",
+            "Russia"
+        ],
+        "correct": 4
+    },
+    "17": {
+        "question": "Which company did Gabe Newell work at before founding Valve Corporation?",
+        "answers": [
+            "Yahoo",
+            "Microsoft",
+            "Apple",
+            "Google"
         ],
         "correct": 2
     },
     "18": {
-        "question": "What country is Cory in the House set in?",
+        "question": "Who is the main antagonist in the Portal franchise?",
         "answers": [
-            "The United States of America",
-            "England",
-            "Canada",
-            "Venezuala"
+            "GLaDOS",
+            "Wheatley",
+            "Rick",
+            "Chell"
         ],
         "correct": 1
     },
     "19": {
-        "question": "How many soccer players should be on the field at the same time?",
+        "question": "In the Naruto manga, what is the last name of Tsunade?",
         "answers": [
-            "24",
-            "22",
-            "20",
-            "26"
+            "Haruno",
+            "Senju",
+            "Uzumaki",
+            "Yamanaka"
         ],
         "correct": 2
     }

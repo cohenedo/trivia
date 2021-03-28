@@ -3,7 +3,7 @@ import socket
 import chatlib
 import random
 import json
-import load_questions_from_web
+import web_questions_loader
 import argparse
 
 logged_users = {}  # a dictionary of client hostnames to usernames
@@ -352,7 +352,7 @@ def main(reset=False):
     print("Welcome to Trivia Server!")
     if reset:
         reset_users_json()
-        load_questions_from_web.load(QUESTIONS_TO_LOAD)
+        web_questions_loader.load(QUESTIONS_TO_LOAD)
     server_socket = setup_socket()
     questions = load_from_json(QUESTIONS_JSON)
     users = load_from_json(USERS_JSON)
