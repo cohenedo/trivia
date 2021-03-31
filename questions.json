@@ -1,202 +1,202 @@
 {
     "0": {
-        "question": "Which Game Boy from the Game Boy series of portable video game consoles was released first?",
+        "question": "What is the name of the main healing item in Dark Souls?",
         "answers": [
-            "Game Boy Advance SP",
-            "Game Boy Micro",
-            "Game Boy Color",
-            "Game Boy Advance"
+            "Ashen Flask",
+            "Health Potion",
+            "Estus Flask",
+            "Orange Juice"
         ],
         "correct": 3
     },
     "1": {
-        "question": "What year was the game Dishonored released?",
+        "question": "The ancient Roman god of war was commonly known as which of the following?",
         "answers": [
-            "2012",
-            "2011",
-            "2008",
-            "2013"
+            "Mars",
+            "Ares",
+            "Juno",
+            "Jupiter"
         ],
         "correct": 1
     },
     "2": {
-        "question": "What is the Capital of the United States?",
+        "question": "What is the highest grossing film of all time (without adjusting for inflation)?",
         "answers": [
-            "Los Angelas, CA",
-            "Washington, D.C.",
-            "Houston, TX",
-            "New York City, NY"
+            "Avatar",
+            "Avengers: Endgame",
+            "Titanic",
+            "Jurassic World"
         ],
         "correct": 2
     },
     "3": {
-        "question": "Which Final Fantasy game consisted of a female-only cast of party members?",
+        "question": "Which of the following was a map that was in Team Fortress 2 at launch?",
         "answers": [
-            "Final Fantasy X-2",
-            "Final Fantasy V",
-            "Final Fantasy IX",
-            "Final Fantasy XIII-2"
+            "Upward",
+            "Hoodoo",
+            "Gold Rush",
+            "Gravel Pit"
         ],
-        "correct": 1
+        "correct": 4
     },
     "4": {
-        "question": "Jaguar Cars was previously owned by which car manfacturer?",
+        "question": "Which of the following blood vessels carries deoxygenated blood?",
         "answers": [
-            "Ford",
-            "Fiat",
-            "General Motors",
-            "Chrysler"
+            "Aorta",
+            "Coronary Artery",
+            "Pulmonary Vein",
+            "Pulmonary Artery"
         ],
-        "correct": 1
+        "correct": 4
     },
     "5": {
-        "question": "Which of the following countries has a flag featuring a yellow lion wielding a sword on a dark red background?",
+        "question": "What are the cylinder-like parts that pump up and down within the engine?",
         "answers": [
-            "Scotland",
-            "Sri Lanka",
-            "Bhutan",
-            "Kiribati"
+            "ABS",
+            "Pistons",
+            "Leaf Springs",
+            "Radiators"
         ],
         "correct": 2
     },
     "6": {
-        "question": "What was the name of the canceled projected by Blizzard Entertainment that would be later become Overwatch?",
+        "question": "Which of these Movies was NOT released in 1996?",
         "answers": [
-            "Titan",
-            "Omnic",
-            "Ghost",
-            "Omega"
-        ],
-        "correct": 1
-    },
-    "7": {
-        "question": "What caused the titular mascot of Yo-Kai Watch, Jibanyan, to become a yokai?",
-        "answers": [
-            "When he put on the harmaki",
-            "Ate one too many chocobars",
-            "Through a magical ritual",
-            "Being run over by a truck"
-        ],
-        "correct": 4
-    },
-    "8": {
-        "question": "What does CPU stand for?",
-        "answers": [
-            "Central Processing Unit",
-            "Central Process Unit",
-            "Central Processor Unit",
-            "Computer Personal Unit"
-        ],
-        "correct": 1
-    },
-    "9": {
-        "question": "Aubrey Graham is better known as",
-        "answers": [
-            "2 Chainz",
-            "Travis Scott",
-            "Drake",
-            "Lil Wayne"
+            "Independence Day",
+            "Mission: Impossible",
+            "Gladiator",
+            "The Rock"
         ],
         "correct": 3
     },
-    "10": {
-        "question": "What was the original name of Crash Bandicoot?",
+    "7": {
+        "question": "In Animal Crossing, who is the manager of the town shop?",
         "answers": [
-            "Wally Wombat",
-            "Willie Wombat",
-            "Marvelous Mole",
-            "Coco Bandicoot"
+            "Tom Nook",
+            "K.K. Slider",
+            "Mr. Resetti",
+            "Gracie"
+        ],
+        "correct": 1
+    },
+    "8": {
+        "question": "What was the name of the cancelled sequel of Team Fortress?",
+        "answers": [
+            "Team Fortress 2: Return to Classic",
+            "Team Fortress 2: Brotherhood of Arms",
+            "Team Fortress 2: Operation Gear Grinder",
+            "Team Fortress 2: Desert Mercenaries"
         ],
         "correct": 2
     },
-    "11": {
-        "question": "Which of these countries remained neutral during World War II?",
+    "9": {
+        "question": "By definition, where does an abyssopelagic animal live?",
         "answers": [
-            "France",
-            "United Kingdom",
-            "Italy",
-            "Switzerland"
+            "At the bottom of the ocean",
+            "Inside a tree",
+            "On top of a mountain",
+            "In the desert"
+        ],
+        "correct": 1
+    },
+    "10": {
+        "question": "Which of the following is not the host of a program on NPR?",
+        "answers": [
+            "Terry Gross",
+            "Ira Glass",
+            "Peter Sagal",
+            "Ben Shapiro"
         ],
         "correct": 4
     },
-    "12": {
-        "question": "In computing, what does MIDI stand for?",
+    "11": {
+        "question": "Who is the main protagonist in Danganronpa 2: Goodbye Despair?",
         "answers": [
-            "Modular Interface of Digital Instruments",
-            "Musical Instrument Digital Interface",
-            "Musical Interface of Digital Instruments",
-            "Musical Instrument Data Interface"
+            "Junko Enoshima",
+            "Hajime Hinata",
+            "Makoto Naegi",
+            "Nagito Komaeda"
+        ],
+        "correct": 2
+    },
+    "12": {
+        "question": "How many spaces are there on a standard Monopoly board?",
+        "answers": [
+            "28",
+            "40",
+            "36",
+            "55"
         ],
         "correct": 2
     },
     "13": {
-        "question": "The longest shared border in the world can be found between which two nations?",
+        "question": "What is the chemical makeup of water?",
         "answers": [
-            "India and Pakistan",
-            "Russia and China",
-            "Canada and the United States",
-            "Chile and Argentina"
+            "H20",
+            "C12H6O2",
+            "H",
+            "CO2"
         ],
-        "correct": 3
+        "correct": 1
     },
     "14": {
-        "question": "What is the oldest Disney film?",
+        "question": "Who is the protagonist in Dead Rising (2006)?",
         "answers": [
-            "Fantasia",
-            "Pinocchio",
-            "Snow White and the Seven Dwarfs",
-            "Dumbo"
+            "Frank West",
+            "John North",
+            "Chuck Greene",
+            "Jason Grey"
         ],
-        "correct": 3
+        "correct": 1
     },
     "15": {
-        "question": "What does DNA stand for?",
+        "question": "Which of these bones is hardest to break?",
         "answers": [
-            "Deoxyribogenetic Acid",
-            "Detoxic Acid",
-            "Deoxyribonucleic Acid",
-            "Deoxyribogenetic Atoms"
+            "Tibia",
+            "Humerus",
+            "Cranium",
+            "Femur"
         ],
-        "correct": 3
+        "correct": 4
     },
     "16": {
-        "question": "In an orchestra, what is the lowest member of the brass family?",
+        "question": "Former United States President Bill Clinton famously played which instrument?",
         "answers": [
-            "Tuba",
-            "Trombone",
-            "Contrabass",
-            "Bassoon"
+            "Saxophone",
+            "Baritone horn",
+            "Violin",
+            "Piano"
         ],
         "correct": 1
     },
     "17": {
-        "question": "Which of the following bones is not in the leg?",
+        "question": "Who is the lead singer of the band Coldplay?",
         "answers": [
-            "Fibula ",
-            "Radius",
-            "Patella",
-            "Tibia"
+            "Chris Connelly",
+            "Chris Martin",
+            "Chris Isaak",
+            "Chris Wallace"
         ],
         "correct": 2
     },
     "18": {
-        "question": "Who is the main protagonist in the game Life is Strange: Before The Storm?",
+        "question": "Which team has won the most Stanley Cups in the NHL?",
         "answers": [
-            "Frank Bowers",
-            "Rachel Amber",
-            "Chloe Price ",
-            "Max Caulfield"
+            "Detroit Red Wings",
+            "Montreal Canadians",
+            "Chicago Blackhawks",
+            "Toronto Maple Leafs"
         ],
-        "correct": 3
+        "correct": 2
     },
     "19": {
-        "question": "The ancient Roman god of war was commonly known as which of the following?",
+        "question": "How many Harry Potter books are there?",
         "answers": [
-            "Ares",
-            "Jupiter",
-            "Juno",
-            "Mars"
+            "6",
+            "7",
+            "8",
+            "5"
         ],
-        "correct": 4
+        "correct": 2
     }
 }

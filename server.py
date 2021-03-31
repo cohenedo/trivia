@@ -247,7 +247,7 @@ def handle_error(conn, error_msg):
     :return: messages_to_send
     """
     global messages_to_send
-    build_and_append_to_outbox(conn, chatliberror_msg, error_msg)
+    build_and_append_to_outbox(conn, chatlib.error_msg, error_msg)
     return
 
 
