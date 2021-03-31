@@ -21,3 +21,5 @@ Trivia game for multiple users over a network made for fun and learning purposes
 ### Client
 - `python .../client.py -p=5678` or `python .../client.py -port=5678` connect to server using port 5678 (default).
 - `python .../client.py --ip="127.0.0.1"` connect to server at ip 127.0.0.1 (defalut).
+-`python .../client.py -h` or `python .../client.py --help` get help
+
