@@ -1,8 +1,7 @@
+import argparse
 import socket
 import chatlib
 
-SERVER_IP = "127.0.0.1"  # Our server will run on same computer as client
-SERVER_PORT = 5678
 ANSWER_OPTIONS = [1, 2, 3, 4]
 QUESTION_COMPONENTS = {"id": 0, "question": 1, "answer1": 2, "answer2": 3, "answer3": 4, "answer4": 5}
 MAX_MSG_LENGTH = 1024
@@ -44,14 +43,19 @@ def build_send_recv_parse(conn, cmd, data=""):
     return recv_message_and_parse(conn)
 
 
-def connect():
+def connect(server_ip, server_port):
     """
     connect to the server using pre-defined globals
     :return: conn (socket object)
     """
-    conn = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    conn.connect((SERVER_IP, SERVER_PORT))
-    return conn
+    print("connecting to server...")
+    try:
+        conn = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        conn.connect((server_ip, server_port))
+        print("Connected: SERVER_IP:", server_ip, "SERVER PORT:", server_port)
+        return conn
+    except (ConnectionError, TimeoutError):
+        error_and_exit("Connection error\nPlease make sure server is up and running and check server ip/port")
 
 
 def error_and_exit(error_msg="error occurred"):
@@ -158,7 +162,17 @@ def get_logged_user(conn):
 
 
 def main():
-    conn = connect()
+
+    parser = argparse.ArgumentParser(description="trivia game client")
+    parser.add_argument("-p", "--port", type=int, default=5678, help="Server port to connect")
+    parser.add_argument("--ip", type=str, default="127.0.0.1", help="Server ip to connect. Input using apostrophes, "
+                                                                    "example: --ip=\"127.0.0.1\"")
+    args = parser.parse_args()
+
+    server_ip = args.ip
+    server_port = args.port
+
+    conn = connect(server_ip, server_port)
     login(conn)
     while True:
         c = input("Please select an action:\n1 - Play a trivia question\n2 - Show My Score\n"

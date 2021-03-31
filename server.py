@@ -14,14 +14,7 @@ questions = {}  # questions dictionary to be loaded on init
 
 QUESTIONS_JSON = "questions.json"
 USERS_JSON = "users.json"
-SERVER_IP = "127.0.0.1"
-SERVER_PORT = 5678
-QUESTIONS_TO_LOAD = 20
 MAX_MSG_LENGTH = 1024
-
-parser = argparse.ArgumentParser(description="Play a trivia game")
-parser.add_argument("-r", "--reset", action="store_true", help="reset user and questions db")
-args = parser.parse_args()
 
 
 def build_and_append_to_outbox(conn, cmd, data):
@@ -82,16 +75,16 @@ def print_client_sockets():
     return
 
 
-def setup_socket():
+def setup_socket(server_ip, server_port):
     """
     Creates new listening socket and returns it
     :return: the socket object
     """
     print("Setting up server...")
     server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    server_socket.bind((SERVER_IP, SERVER_PORT))
+    server_socket.bind((server_ip, server_port))
     server_socket.listen()
-    print("Listening for clients...")
+    print("Listening for clients... IP:", server_ip, "PORT:", server_port)
     return server_socket
 
 
@@ -338,18 +331,29 @@ def handle_client_message(conn, cmd, data):
     return
 
 
-def main(reset=False):
+def main():
 
     global client_sockets
     global messages_to_send
     global users
     global questions
 
+    parser = argparse.ArgumentParser(description="trivia game server")
+    parser.add_argument("-r", "--reset", action="store_true", help="reset user and questions db")
+    parser.add_argument("-p", "--port", type=int, default=5678, help="port to use for server")
+    parser.add_argument("--ip", type=str, default="0.0.0.0", help="ip for server to listen")
+    parser.add_argument("-q", "--questions", type=int, default=10, help="number of questions to load")
+    args = parser.parse_args()
+
+    server_ip = args.ip
+    server_port = args.port
+    question_to_load = args.questions
+
     print("Welcome to Trivia Server!")
-    if reset:
+    if args.reset:
         reset_users_json()
-        web_questions_loader.load(QUESTIONS_TO_LOAD)
-    server_socket = setup_socket()
+        web_questions_loader.load(question_to_load)
+    server_socket = setup_socket(server_ip, server_port)
     questions = load_from_json(QUESTIONS_JSON)
     users = load_from_json(USERS_JSON)
 
@@ -371,4 +375,4 @@ def main(reset=False):
 
 
 if __name__ == '__main__':
-    main(args.reset)
+    main()
