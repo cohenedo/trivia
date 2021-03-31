@@ -13,7 +13,7 @@ Trivia game for multiple users over a network made for fun and learning purposes
 ## CLI
 ### Server
 - `python .../server.py -r` or `python .../server.py --reset` resetting user database and loading new questions (default=10 question).
-- `python .../server.py -r -q=n` or `python .../server.py -r --question=n` resetting userdatabase and load n questions.
+- `python .../server.py -r -q=n` or `python .../server.py -r --question=n` resetting user database and load n questions.
 - `python .../server.py -p=5678` or `python .../server.py -port=5678` set up server using port 5678 (default).
 - `python .../server.py --ip="0.0.0.0"` set up server listen to ip 0.0.0.0 (defalut).
 - `python .../server.py -h` or `python .../server.py --help` get help
